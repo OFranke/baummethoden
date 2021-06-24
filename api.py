@@ -60,3 +60,12 @@ def stuff():
         }
     
     return Response('Please provide all neccessary parameters to get a prediction: zylinder, ps, gewicht, beschleunigung, baujahr', mimetype='application/json')
+
+@app.route('/predict_multiple', methods = ['POST'])
+def predict_multiple():
+    content = request.get_json(silent=True)
+    print('request body:', content)
+
+    return {
+        'result': 'blabla'
+    }
